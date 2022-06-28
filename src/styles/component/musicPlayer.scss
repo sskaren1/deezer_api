@@ -1,0 +1,41 @@
+@import './../base/variables.scss';
+// @import './../base/mixins.scss';
+
+.musicPlayer{
+    display: flex;
+    column-gap: 2rem;
+
+    .musicPlayer__image{
+        width: 10rem;
+        // height: 10rem;
+        img{
+           object-fit: cover; 
+        }
+    }
+}
+.musicPlayer__content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+
+    // .musicPlayer__controls{
+    //     display: flex;
+    //     column-gap: 1rem;
+    // }
+    .musicPlayer__controls, .musicPlayer__volume{
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+        width: 20rem;              
+        button{
+            svg{
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+
+
+

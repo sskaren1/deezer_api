@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+//* Fonts
+$main-font: 'Quicksand', sans-serif;
+$secondary-font: 'Quicksand', sans-serif;
+$link-font: 'Quicksand', sans-serif;
+
+//* Font weight
+$regular: 400; 
+$bold: 700; 
+$black: 900;
+
+//* Media Queries
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$macbook_air:1440px;
+$macbook_pro_13:2560px;
+
+//* gap - padding - margin
+$gap-1: 1rem;
+$gap-2: 2rem;
+$gap-3: 3rem;
+$gap-4: 4rem;
+$gap-5: 5rem;
+$padding_elemt:2rem;
+$margin_elemt:2rem;
+
+
+//* Color Palette - SCSS RGB
+$color-1:#662323;
+$color-2:#EB5757;
+$color-3:#FF7676;
+$color-4:#E86060;
+$color-5:#A70000;
+$color-6:#555555;
+$color-7:#828282;
+$color-8:#4F4F4F;
+$color-9:#BDBDBD;
+
+//* Palette Neutral
+$neutral-1: rgba(0 , 0, 0, 1);
+$neutral-2: rgba(255 , 255, 255, 1);
+$neutral-3: rgb(128, 128, 128);

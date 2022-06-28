@@ -1,0 +1,78 @@
+@import "./../base/variables.scss";
+// @import "./../base/mixins.scss";
+
+.resultsMusics{
+    h2{
+        margin: 2rem 0;
+        text-align: left;
+    }
+}
+.resultsMusics__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.card--music {
+  width: 20rem;
+//   border: 10px solid #000;
+
+  h3 {
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+
+  .card--music-image {
+    position: relative;
+  }
+}
+.card-image__play {
+  // background-color: rgba(0, 255, 247, 0.5);
+  // border-radius: 1rem;
+  // opacity: 1;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  // transition: all 0.4s ease;
+
+//   &:hover {
+//     opacity: 1;
+//     cursor: pointer;
+//   }
+
+  button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $neutral-2;
+    svg {
+      font-size: 8rem;
+      &:hover {
+        color: $neutral-2;
+      }
+    }
+  }
+}
+.card-image__more {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $neutral-2;
+    svg {
+      font-size: 2rem;
+      &:hover {
+        color: $neutral-2;
+      }
+    }
+  }
+}
