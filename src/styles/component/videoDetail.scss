@@ -1,0 +1,121 @@
+@import "./../base/variables.scss";
+@import "./../base/mixins.scss";
+
+.videoDetail {
+  height: auto;
+
+  @include telefono{
+    height: 20rem;
+  }
+
+  .videoDetail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include telefono {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+.videoDetail__image {
+  position: relative;
+  min-width: 20rem;
+  //width: 100%;
+  
+  img {
+      width: 100%;
+      height: 100%;
+  }
+  @include tablet {
+    min-width: 20rem;
+    width: 20rem;
+  }
+
+  .card-image__play {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: $neutral-2;
+      svg {
+        font-size: 8rem;
+        &:hover {
+          color: $neutral-2;
+        }
+      }
+    }
+  }
+}
+
+.videoDetail__info {
+  background: linear-gradient(
+      to bottom,
+      rgba($color: $color-3, $alpha: 0.6) 0%,
+      rgba($color: $color-3, $alpha: 0.6) 100%
+    ),
+    url("https://i.ibb.co/x51FTFc/adele-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+  padding: 2rem;
+  //height: 20rem;
+
+  h2 {
+    color: $neutral-2;
+    font-size: 2.2rem;
+    text-align: left;
+    margin-top: 2rem;
+    @include telefono{
+        margin: 0;
+    }
+  }
+  p {
+    color: $neutral-2;
+    font-size: 1.3rem;
+    &:first-of-type {
+      margin-bottom: 1.5rem;
+      span{
+        margin-left: 2rem;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+  .button--reproducir{
+    background-color: $color-2;
+    text-transform: capitalize;
+    border-radius: 4rem;
+    &:hover{
+        border: 1px solid $color-2;
+        background-color: $color-2;
+        color: $neutral-2;
+    }
+  }
+  .button--follow{
+    border: 1.5px solid $color-2;
+    text-transform: capitalize;
+    color: $neutral-2;
+    border-radius: 4rem;
+
+    &:hover{
+        border: 1px solid $color-2;
+        color: $neutral-2;
+    }
+  }
+              
+  .button--more{
+    svg:hover{
+        color: $neutral-2;
+    }
+  }
+}

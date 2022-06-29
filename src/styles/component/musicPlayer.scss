@@ -1,41 +1,98 @@
-@import './../base/variables.scss';
-// @import './../base/mixins.scss';
+@import "./../base/variables.scss";
+@import "./../base/mixins.scss";
 
-.musicPlayer{
-    display: flex;
-    column-gap: 2rem;
+.musicPlayer {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2rem;
+  overflow: hidden;
 
-    .musicPlayer__image{
-        width: 10rem;
-        // height: 10rem;
-        img{
-           object-fit: cover; 
-        }
+  .musicPlayer__image {
+    min-width: 12rem;
+    width: 14rem;
+    margin: 0 auto;
+    overflow: hidden;
+
+    img {
+      object-fit: contain;          
     }
-}
-.musicPlayer__content{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 1.5rem 0;
+    @include telefono{
+        min-width: 12rem;
+        width: 15rem;
+    }
+  }
 
-    // .musicPlayer__controls{
-    //     display: flex;
-    //     column-gap: 1rem;
-    // }
-    .musicPlayer__controls, .musicPlayer__volume{
-        display: flex;
-        column-gap: 1rem;
+  @include telefono{
+    height: 10rem;
+    flex-direction: row;
+    
+  }
+}
+
+.musicPlayer__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  padding: 1rem 0;
+
+  .musicPlayer__info {
+    h3 {
+      font-size: 1.6rem;
+      text-align: left;
+
+      @include tablet{
+        text-align: center;
+      }
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  .musicPlayer__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    width: 65%;
+
+    .controls,
+    .volume {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+    .volume {
+      width: 100%;
+      max-width: 25rem;
+      @include telefono{
+        width: 80%;
+      }
+    }
+
+    button {
+      svg {
+        font-size: 2.2rem;
+        @include telefono{
+            font-size: 2.8rem;
+        }
+      }
+    }
+
+    @include tablet{
+        flex-direction: row;
+        column-gap: 0.2rem;
+        justify-content: space-between;
         align-items: center;
-        width: 20rem;              
-        button{
-            svg{
-                font-size: 3rem;
-            }
-        }
     }
+  }
+
+  @include telefono {
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: space-between;
+  }
 }
-
-
-
-

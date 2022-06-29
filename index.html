@@ -8,7 +8,11 @@
       content="width=device-width, initial-scale=1, maximum-scale=5"
     />
 
-    <link rel="icon" type="image/png" href="/src/assets/images/foxbel-music-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/assets/images/foxbel-music-icon.png"
+    />
 
     <title>Foxbel Music</title>
 
@@ -28,10 +32,29 @@
       name="twitter:description"
       content="Página donde se puede visualizar y reproducir canciones, utiliza Deezer API"
     />
-    <meta name="twitter:image" content="./src/assets/images/foxbel-music-icon.png" />
+    <meta
+      name="twitter:image"
+      content="./src/assets/images/foxbel-music-icon.png"
+    />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- <script src="https://e-cdn-files.dzcdn.net/js/min/dz.js"></script> -->
+    <div id="dz-root"></div>
+    <script>
+      window.dzAsyncInit = function () {
+        DZ.init({
+          appId: "549062",
+          channelUrl: "http://localhost:3000/",
+        });
+      };
+      (function () {
+        var e = document.createElement("script");
+        e.src = "https://e-cdn-files.dzcdn.net/js/min/dz.js";
+        e.async = true;
+        document.getElementById("dz-root").appendChild(e);
+      })();
+    </script>
   </body>
 </html>

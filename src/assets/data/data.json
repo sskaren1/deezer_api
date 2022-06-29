@@ -1,0 +1,121 @@
+[
+    {
+        "id":1,
+        "nombre_cantante":"Adele",
+        "album":"30",
+        "cancion":"Easy on me",
+        "imagen_album":"https://i.ibb.co/x51FTFc/adele-1.jpg"
+    },
+    {
+        "id":2,
+        "nombre_cantante":"Queen",
+        "album":"Queen II",
+        "cancion":"Procession",
+        "imagen_album":"https://i.ibb.co/wCnqFVR/queen-1.jpg"
+    },
+    {
+        "id":3,
+        "nombre_cantante":"Rihanna",
+        "album":"Loud",
+        "cancion":"What's my name",
+        "imagen_album":"https://i.ibb.co/7t1rN7s/rihanna-2.jpg"
+    },
+    {
+        "id":4,
+        "nombre_cantante":"Rihanna",
+        "album":"A girl like me",
+        "cancion":"SOS",
+        "imagen_album":"https://i.ibb.co/xs8703x/rihanna-1.jpg"
+    },
+    {
+        "id":5,
+        "nombre_cantante":"Adele",
+        "album":"21",
+        "cancion":"Rolling in the Deep",
+        "imagen_album":"https://i.ibb.co/8m9Xq5V/adele-2.jpg"
+    },
+    {
+        "id":6,
+        "nombre_cantante":"Adele",
+        "album":"30",
+        "cancion":"My little love",
+        "imagen_album":"https://i.ibb.co/x51FTFc/adele-1.jpg"
+    },
+    {
+        "id":7,
+        "nombre_cantante":"Queen",
+        "album":"Queen",
+        "cancion":"My Fairy King",
+        "imagen_album":"https://i.ibb.co/GFQr91D/queen-2.jpg"
+    },
+    {
+        "id":8,
+        "nombre_cantante":"Adele",
+        "album":"30",
+        "cancion":"Oh my god",
+        "imagen_album":"https://i.ibb.co/x51FTFc/adele-1.jpg"
+    },    
+    {
+        "id":9,
+        "nombre_cantante":"Rihanna",
+        "album":"Loud",
+        "cancion":"Fading",
+        "imagen_album":"https://i.ibb.co/7t1rN7s/rihanna-2.jpg"
+    },
+    {
+        "id":10,
+        "nombre_cantante":"Adele",
+        "album":"21",
+        "cancion":"Someone like you",
+        "imagen_album":"https://i.ibb.co/8m9Xq5V/adele-2.jpg"
+    },
+    {
+        "id":11,
+        "nombre_cantante":"Queen",
+        "album":"Queen II",
+        "cancion":"Father to son",
+        "imagen_album":"https://i.ibb.co/wCnqFVR/queen-1.jpg"
+    },
+    {
+        "id":12,
+        "nombre_cantante":"Rihanna",
+        "album":"Loud",
+        "cancion":"S&M",
+        "imagen_album":"https://i.ibb.co/7t1rN7s/rihanna-2.jpg"
+    },    
+    {
+        "id":13,
+        "nombre_cantante":"Rihanna",
+        "album":"A girl like me",
+        "cancion":"We ride",
+        "imagen_album":"https://i.ibb.co/xs8703x/rihanna-1.jpg"
+    },
+    {
+        "id":14,
+        "nombre_cantante":"Queen",
+        "album":"Queen",
+        "cancion":"Keep Yourself Alive",
+        "imagen_album":"https://i.ibb.co/GFQr91D/queen-2.jpg"
+    },
+    {        
+        "id":15,
+        "nombre_cantante":"Rihanna",
+        "album":"A girl like me",
+        "cancion":"Kisses don't lie",
+        "imagen_album":"https://i.ibb.co/xs8703x/rihanna-1.jpg"
+    },
+    {
+        "id":16,
+        "nombre_cantante":"Queen",
+        "album":"Queen",
+        "cancion":"Liar",
+        "imagen_album":"https://i.ibb.co/GFQr91D/queen-2.jpg"
+    },  
+    {
+        "id":17,
+        "nombre_cantante":"Queen",
+        "album":"Queen II",
+        "cancion":"The Loser in the end",
+        "imagen_album":"https://i.ibb.co/wCnqFVR/queen-1.jpg"
+    }
+]

@@ -1,23 +1,9 @@
 // Importing Hooks
 import { useEffect, useState } from "react";
 // Importing MUI
-import { Box, TextField } from "@mui/material";
-// import Box from '@mui/material/Box';
-import IconButton from "@mui/material/IconButton";
-import Input from "@mui/material/Input";
-import FilledInput from "@mui/material/FilledInput";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-// import TextField from '@mui/material/TextField';
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { Paper, InputBase, IconButton } from "@mui/material";
 // Importing Material Icons
-import DehazeIcon from "@mui/icons-material/Dehaze";
-import PersonIcon from "@mui/icons-material/Person";
-import SearchIcon from "@mui/icons-material/Search";
+import { MenuIcon, PersonIcon, SearchIcon } from "@mui/icons-material";
 // Importing estilos SASS
 import "./../styles/component/searchBar.scss";
 
@@ -26,7 +12,7 @@ const SearchBar = (props) => {
 
   // A partir de esa cantidad de pixeles de altura manda true al navbar
   const NavegacionFija = () => {
-    if (window.scrollY >= 10) {
+    if (window.scrollY >= 50) {
       setNavBar(true);
     } else {
       setNavBar(false);
@@ -49,37 +35,33 @@ const SearchBar = (props) => {
       <div className={classNavBar}>
         <div className="navBar__container">
           <div className="navBar__item navBar__item--search">
-            <FormControl variant="outlined">
-              <InputLabel htmlFor="outlined-adornment-search">
-                Search
-              </InputLabel>
-              <OutlinedInput
-                id="outlined-adornment-search"
-                // type={values.showPassword ? "text" : "password"}
-                // value={values.password}
-                // onChange={handleChange("password")}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      // onClick={handleClickShowPassword}
-                      // onMouseDown={handleMouseDownPassword}
-                      edge="end"
-                    >
-                      <SearchIcon />
-                      {/* {values.showPassword ? <VisibilityOff /> : <Visibility />} */}
-                    </IconButton>
-                  </InputAdornment>
-                }
-                label="Search"
+            <Paper
+              component="form"
+              sx={{
+                p: "1px 4px",
+                display: "flex",
+                alignItems: "center",
+                borderRadius:"30px",
+                background: "transparent",
+                borderColor:"#000"
+              }}
+            >
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Buscar"
+                inputProps={{ "aria-label": "buscar" }}
+                className="inputLabel"
               />
-            </FormControl>
+              <IconButton  sx={{ p: "8px" }} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            </Paper>            
           </div>
 
           <div className="navBar__item navBar__item--user">
-            <button className="icon icon--navBar">
+            <button className="icon icon--navBar icon--user">
               <PersonIcon />
-              <span>Francisco M.</span>
+              <span>Karen O.</span>
             </button>
 
             <button
@@ -87,7 +69,7 @@ const SearchBar = (props) => {
               className="icon icon--navBar icon--bar"
               onClick={props.funcion}
             >
-              <DehazeIcon />
+              <MenuIcon />
             </button>
           </div>
         </div>

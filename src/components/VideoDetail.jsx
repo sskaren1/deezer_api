@@ -1,28 +1,20 @@
 import React from "react";
-//Importando Hooks
+//Importing axios
 import axios from "axios";
+//Importing Hooks
 import { useState, useEffect } from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-// Importing images
-import artista from "./../assets/images/pik5.png";
-import { getGenero } from "./../service";
+// Importing MUI
+import { Stack, Button, IconButton }from "@mui/material";
+// Importing Material Icons
+import { MoreHorizIcon, PlayArrowIcon } from "@mui/icons-material";
+// Importing estilos SASS
+import "./../styles/component/videoDetail.scss";
 
 const VideoDetail = () => {
-  const [genero, setGenero] = useState([]);
-  // Obteniendo la base de datos tblPostulantes
-  // const fetchApplicants = async () => {
-  //   const data = await getGenero();
-  //   console.log(data)
-  //   // return data;
-  // };
-
   // const fetchGenero = async () => {
   //   const data = await getGenero();
   //   if(data.ok){
-  //     setGenero(data.content);
+  //     setGenero(data);
   //   }
   //   // console.log(data)
   // };
@@ -32,22 +24,31 @@ const VideoDetail = () => {
   //   console.log("data",data);
   // }
 
-  useEffect(() => {
-    axios
-      .get(
-        "https://cors-anywhere.herokuapp.com/https://connect.deezer.com/oauth/access_token.php?app_id=548842&secret=4544433e07d6887d68f93d58cb67f076&code=fr3a1bb1518dc624ff4418e50dfecdc5"
-      )
-      .then((response) => {
-        console.log(response);
-      });
-  }, []);
+  // useEffect(() => {
+  // axios
+  //   .get(
+  //     "https://cors-anywhere.herokuapp.com/https://connect.deezer.com/oauth/access_token.php?app_id=548842&secret=4544433e07d6887d68f93d58cb67f076&code=fr3a1bb1518dc624ff4418e50dfecdc5"
+  //   )
+  //   .then((response) => {
+  //     console.log(response);
+  //   });
+  // }, []);
 
   return (
     <>
       <section className="videoDetail">
-        <Stack spacing={2} direction="row">
+        {/* <Stack spacing={0} direction="row" className="videoDetail-contain"> */}
+        <div className="videoDetail-container">
           <div className="videoDetail__image">
-            <img src={artista} alt="imagen del artista" />
+            <img
+              src="https://i.ibb.co/x51FTFc/adele-1.jpg"
+              alt="imagen del artista"
+            />
+            <div className="card-image__play">
+              <IconButton aria-label="play">
+                <PlayArrowIcon />
+              </IconButton>
+            </div>
           </div>
           <div className="videoDetail__info">
             <h2>Adele 21</h2>
@@ -59,16 +60,16 @@ const VideoDetail = () => {
               praesentium ab, fugiat et quam sint!
             </p>
             <Stack spacing={2} direction="row">
-              <Button variant="contained">Reproducir</Button>
-              <Button variant="outlined">Seguir</Button>
-              <IconButton aria-label="delete" size="small">
+              <Button variant="contained" className="button--reproducir">Reproducir</Button>
+              <Button variant="outlined" className="button--follow">Seguir</Button>
+              <IconButton aria-label="delete" size="small" className="button--more">
                 <MoreHorizIcon />
               </IconButton>
             </Stack>
           </div>
-        </Stack>
+        </div>
       </section>
-{/* 
+      {/* 
       <iframe
         title="deezer-widget"
         src="https://widget.deezer.com/widget/dark/album/1668645"

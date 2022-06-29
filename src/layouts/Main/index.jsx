@@ -1,12 +1,12 @@
-// Importando Hooks
+// Importing Hooks
 import { useState } from "react";
-// Importando react-router
+// Importing react-router
 import { Outlet } from "react-router-dom";
 // Importing components
 import NavigationBar from "./../../components/NavigationBar";
 import SearchBar from "./../../components/SearchBar";
 import MusicPlayer from "./../../components/MusicPlayer";
-// Importando estilos
+// Importing estilos SASS
 import "./../../styles/layouts/main.scss";
 
 const Main = () => {
