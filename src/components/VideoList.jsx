@@ -4,12 +4,12 @@ import data from "./../assets/data/data.json";
 // Importing MUI
 import IconButton from "@mui/material/IconButton";
 // Importing Material Icons
-import { PlayArrowIcon, MoreVertIcon } from "@mui/icons-material";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 // Importing estilos SASS
 import "./../styles/component/videoList.scss";
 
-const VideoList = () => {
- 
+const VideoList = () => { 
 
   return (
     <section className="resultsMusics">

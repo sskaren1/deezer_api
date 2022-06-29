@@ -1,15 +1,19 @@
 // Importing Hooks
 import { useEffect, useState } from "react";
+// Importing data
+import data from "./../assets/data/data.json";
 // Importing MUI
 import { Paper, InputBase, IconButton } from "@mui/material";
 // Importing Material Icons
-import { MenuIcon, PersonIcon, SearchIcon } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
+import PersonIcon from "@mui/icons-material/Person";
+import SearchIcon from "@mui/icons-material/Search";
 // Importing estilos SASS
 import "./../styles/component/searchBar.scss";
 
 const SearchBar = (props) => {
+  // Navegación fija
   const [navBar, setNavBar] = useState(false);
-
   // A partir de esa cantidad de pixeles de altura manda true al navbar
   const NavegacionFija = () => {
     if (window.scrollY >= 50) {
@@ -19,6 +23,41 @@ const SearchBar = (props) => {
     }
   };
 
+  // Search
+  const [songs, setSongs] = useState([]);
+  const fetchData = async () => {
+    const response = await data;
+    setSongs(response);
+  };
+  console.log("data inicial", songs);
+
+  const handleSearch = (e) => {
+    const searchInput = e.target.value;
+    console.log("input buscado", searchInput);
+
+    if ((searchInput.length === 0)||(searchInput.length === 1)) {
+      fetchData();
+    }
+
+    if (searchInput.length > 1) {
+      const filterSong = songs.filter((song) =>
+        (song.cancion.toUpperCase()&&song.album.toUpperCase()).includes(searchInput.toUpperCase())
+      );
+
+      setSongs(filterSong);
+      console.log("songs filtrados", filterSong);
+    }
+  };
+
+  const buttonSearch = ()=>{
+    const data = songs;
+    console.log("data search",data);
+    return data;
+  }
+
+  //useEffect(() => {
+    //fetchData();
+  //}, []);
   // Inicializando con el evento scroll
   useEffect(() => {
     window.addEventListener("scroll", NavegacionFija, true);
@@ -27,7 +66,6 @@ const SearchBar = (props) => {
       window.removeEventListener("scroll", NavegacionFija, true);
     };
   }, []);
-
   const classNavBar = navBar ? "navBar--fijo" : "navBar";
 
   return (
@@ -41,9 +79,9 @@ const SearchBar = (props) => {
                 p: "1px 4px",
                 display: "flex",
                 alignItems: "center",
-                borderRadius:"30px",
+                borderRadius: "30px",
                 background: "transparent",
-                borderColor:"#000"
+                borderColor: "#000",
               }}
             >
               <InputBase
@@ -51,11 +89,16 @@ const SearchBar = (props) => {
                 placeholder="Buscar"
                 inputProps={{ "aria-label": "buscar" }}
                 className="inputLabel"
+                onChange={handleSearch}
               />
-              <IconButton  sx={{ p: "8px" }} aria-label="search">
+              <IconButton
+                sx={{ p: "8px" }}
+                aria-label="search"
+                onClick={buttonSearch}
+              >
                 <SearchIcon />
               </IconButton>
-            </Paper>            
+            </Paper>
           </div>
 
           <div className="navBar__item navBar__item--user">

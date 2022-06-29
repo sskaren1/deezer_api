@@ -1,8 +1,12 @@
 import React from "react";
 // Importing MUI
-import { IconButton, Slider, SkipPreviousIcon, VolumeDown, VolumeUp } from "@mui/material";
+import { IconButton, Slider } from "@mui/material";
 // Importing Material Icons
-import { PlayArrowIcon, SkipNextIcon } from "@mui/icons-material";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import VolumeDownIcon from '@mui/icons-material/VolumeDown';
 // Importing estilos SASS
 import "./../styles/component/musicPlayer.scss";
 
@@ -38,7 +42,7 @@ const MusicPlayer = () => {
             </div>
             <div className="volume">
               <IconButton aria-label="volumeDown">
-                <VolumeDown />
+                <VolumeDownIcon />
               </IconButton>
               <Slider
                 aria-label="Volume"
@@ -46,7 +50,7 @@ const MusicPlayer = () => {
                 onChange={handleChange}
               />
               <IconButton aria-label="volumeUp">
-                <VolumeUp />
+                <VolumeUpIcon />
               </IconButton>
             </div>
           </div>

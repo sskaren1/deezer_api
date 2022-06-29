@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 // Importing MUI
 import { Stack, Button, IconButton }from "@mui/material";
 // Importing Material Icons
-import { MoreHorizIcon, PlayArrowIcon } from "@mui/icons-material";
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 // Importing estilos SASS
 import "./../styles/component/videoDetail.scss";
 
