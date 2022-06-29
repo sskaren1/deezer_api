@@ -36,7 +36,7 @@ const VideoList = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.deezer.com/album/317218537"
+        "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/317218537"
       )
       .then((response) => {
         console.log(response);
