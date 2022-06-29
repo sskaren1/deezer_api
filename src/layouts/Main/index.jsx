@@ -25,7 +25,7 @@ const Main = () => {
   return (
     <>
       <div className="main">
-        <div className="main__container">
+        <div className="main-container">
           <div className={classMenu}>
             <NavigationBar />
           </div>

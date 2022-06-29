@@ -1,5 +1,23 @@
 import axios from "axios";
-import { URL_BACKEND } from "../environments/environments";
+import { URL_ALBUM } from "../environments/environments";
+
+export const getAlbum = () => {
+  axios
+    .get(
+      "URL_ALBUM/317218537"
+    )
+    .then((response) => {
+      this.setState({ response });
+    })
+    .catch((err) => {
+      console.log("error", err);
+    });
+};
+
+
+
+
+
 
 // const headers = {
 //   "Access-Control-Allow-Origin": "*",
@@ -26,18 +44,7 @@ import { URL_BACKEND } from "../environments/environments";
 //   }
 // };
 
-// export const getGenero = () => {
-//   axios
-//     .get(
-//       "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127"
-//     )
-//     .then((response) => {
-//       this.setState({ response });
-//     })
-//     .catch((err) => {
-//       console.log("error", err);
-//     });
-// };
+
 
 // export const getGenero2 = async (busqueda) => {
 //   let configuracion = {

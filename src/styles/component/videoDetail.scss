@@ -59,8 +59,8 @@
 .videoDetail__info {
   background: linear-gradient(
       to bottom,
-      rgba($color: $color-3, $alpha: 0.6) 0%,
-      rgba($color: $color-3, $alpha: 0.6) 100%
+      rgba($color: $color-5, $alpha: 0.7) 0%,
+      rgba($color: $color-5, $alpha: 0.7) 100%
     ),
     url("https://i.ibb.co/x51FTFc/adele-1.jpg");
   background-repeat: no-repeat;
@@ -80,35 +80,40 @@
   }
   p {
     color: $neutral-2;
-    font-size: 1.3rem;
     &:first-of-type {
+      font-size: 1.4rem;
       margin-bottom: 1.5rem;
       span{
         margin-left: 2rem;
+        font-size: 1rem;
+        color: $color-1;
       }
     }
     &:last-of-type {
+      font-size: 1.2rem;
       margin-bottom: 4rem;
     }
   }
   .button--reproducir{
-    background-color: $color-2;
+    background-color: $color-4;
     text-transform: capitalize;
     border-radius: 4rem;
+    font-size: 1.4rem;
     &:hover{
-        border: 1px solid $color-2;
-        background-color: $color-2;
+        border: 1px solid $color-4;
+        background-color: $color-4;
         color: $neutral-2;
     }
   }
   .button--follow{
-    border: 1.5px solid $color-2;
+    border: 1.5px solid $color-4;
     text-transform: capitalize;
     color: $neutral-2;
     border-radius: 4rem;
+    font-size: 1.4rem;
 
     &:hover{
-        border: 1px solid $color-2;
+        border: 1px solid $color-4;
         color: $neutral-2;
     }
   }

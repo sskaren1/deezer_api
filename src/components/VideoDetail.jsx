@@ -1,6 +1,6 @@
 import React from "react";
-//Importing axios
-import axios from "axios";
+// Importing Axios
+import axios from "axios"
 //Importing Hooks
 import { useState, useEffect } from "react";
 // Importing MUI

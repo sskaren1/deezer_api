@@ -2,11 +2,11 @@
 @import "./../base/mixins.scss";
 
 .main {
-  .main__container {
-    width: 100%;
+  .main-container {
+    width: 100%!important;
     padding: 0;
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 0!important;
+    margin-left: 0!important;
     height: 100%;
   }
 }
@@ -16,6 +16,7 @@
   position: relative;
   background-color: transparent;
   border-radius: 1rem;
+  min-height: 100vh;
   @include grid-rows(auto, auto, $gap-1);
 
   // efecto del desplazamiento a la izquierda, derecha del content cuando aparece o desaparece el aside

@@ -1,13 +1,17 @@
 // Importing react-router-dom
 import Router from "./router";
+// Importing userProvider
+import { UserProvider } from "./context/UserContext";
 // Importing styles sass
 import "./styles/base/global.scss";
 
 function App() {
   return (
-    <div>
-      <Router />
-    </div>
+    <UserProvider>
+      <div>
+        <Router />
+      </div>
+    </UserProvider>
   );
 }
 

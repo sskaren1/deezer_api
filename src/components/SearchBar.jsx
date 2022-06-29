@@ -1,5 +1,7 @@
 // Importing Hooks
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+// Importing Context
+import { UserContext } from "../context/UserContext";
 // Importing data
 import data from "./../assets/data/data.json";
 // Importing MUI
@@ -12,6 +14,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import "./../styles/component/searchBar.scss";
 
 const SearchBar = (props) => {
+  const { setSongs, sendSearch } = useContext(UserContext);
+
   // Navegación fija
   const [navBar, setNavBar] = useState(false);
   // A partir de esa cantidad de pixeles de altura manda true al navbar
@@ -24,40 +28,40 @@ const SearchBar = (props) => {
   };
 
   // Search
-  const [songs, setSongs] = useState([]);
+  const [songsSearch, setSongsSearch] = useState([]);
   const fetchData = async () => {
     const response = await data;
-    setSongs(response);
+    setSongsSearch(response);
   };
-  console.log("data inicial", songs);
 
   const handleSearch = (e) => {
     const searchInput = e.target.value;
     console.log("input buscado", searchInput);
 
-    if ((searchInput.length === 0)||(searchInput.length === 1)) {
+    if (searchInput.length === 0 || searchInput.length === 1) {
       fetchData();
     }
 
     if (searchInput.length > 1) {
-      const filterSong = songs.filter((song) =>
-        (song.cancion.toUpperCase()&&song.album.toUpperCase()).includes(searchInput.toUpperCase())
+      const filterSong = songsSearch.filter((song) =>
+        (song.cancion.toUpperCase() && song.album.toUpperCase()).includes(
+          searchInput.toUpperCase()
+        )
       );
-
-      setSongs(filterSong);
+      setSongsSearch(filterSong);
       console.log("songs filtrados", filterSong);
     }
   };
 
-  const buttonSearch = ()=>{
-    const data = songs;
-    console.log("data search",data);
-    return data;
-  }
+  const buttonSearch = () => {
+    const data = songsSearch;
+    sendSearch(data)
+  };
 
   //useEffect(() => {
-    //fetchData();
+  //fetchData();
   //}, []);
+
   // Inicializando con el evento scroll
   useEffect(() => {
     window.addEventListener("scroll", NavegacionFija, true);
@@ -81,14 +85,14 @@ const SearchBar = (props) => {
                 alignItems: "center",
                 borderRadius: "30px",
                 background: "transparent",
-                borderColor: "#000",
+                borderColor: "#828282",
               }}
             >
               <InputBase
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="Buscar"
                 inputProps={{ "aria-label": "buscar" }}
-                className="inputLabel"
+                className="inputSearch"
                 onChange={handleSearch}
               />
               <IconButton

@@ -68,7 +68,8 @@
     font-size: 1.6rem;
   }
   .icon--search {
-    color: $color-7;
+    color: $color-9;
+    font-size: 1.8rem;
   }
 }
 
@@ -84,11 +85,11 @@
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
+    svg{
+      color:$color-4;
+      font-size: 1.4rem;
+    }
   }
-
-  // .icon--bar {
-  //   cursor: pointer;
-  // }
 
   .icon--bar svg {
     display: block;
